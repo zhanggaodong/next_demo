@@ -5,11 +5,10 @@ async function getData(id) {
   return res.json()
 }
 
-let title = ''  
+ 
 
 export default async  function Detail({ params: { id } }) { 
-    const data =  await getData(id)  
-    title = data.data.title
+    const data =  await getData(id)   
     return (
         <DetailPage data={data.data}></DetailPage>
     )
@@ -19,14 +18,14 @@ export default async  function Detail({ params: { id } }) {
 export async function generateMetadata({ params }) {
   const { id } = params
  
-
+  const data =  await getData(id)   
   const siteUrl = `/detail/${id}` 
 
   return {
-    title,
+    title:data.data.title,
     description:'description',
     openGraph: {
-      title,
+      title:data.data.title,
       description:'description', 
       publishedTime:'publishedTime', 
       url: siteUrl

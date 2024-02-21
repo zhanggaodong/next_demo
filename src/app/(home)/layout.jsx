@@ -40,7 +40,7 @@ export default async function RootLayout({ children }) {
  
 
 export const metadata = {
-  metadataBase: new URL('https://onur.dev'),
+  metadataBase: new URL('https://note.wuhewan.com'),
   robots: {
     index: true,
     follow: true
