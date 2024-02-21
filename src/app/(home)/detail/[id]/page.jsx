@@ -1,29 +1,15 @@
-"use client"
+import DetailPage from "@/components/DetailPage" 
 
-import { useEffect } from 'react' 
-import DetailPage from "@/components/DetailPage"
+async function getData(id) {
+  const res = await fetch(`https://navapi.wuhewan.com/api/news/web/detail?id=${id}`)
+  return res.json()
+}
 
- 
-
-import hljs from "highlight.js";
-import 'highlight.js/styles/monokai-sublime.css'
- 
   
-export default  function Detail({ params: { id } }) {
-  
- 
-  useEffect(()=>{
-    hljs.configure({ 
-      ignoreUnescapedHTML: true
-    }) 
-    const codes = document.querySelectorAll('.detailContent pre code')
-    codes.forEach((el) => { 
-      hljs.highlightElement(el)
-    })
-  }) 
-
+export default async  function Detail({ params: { id } }) { 
+    const data =  await getData(id)  
     return (
-        <DetailPage id={id}></DetailPage>
+        <DetailPage data={data.data}></DetailPage>
     )
-  }
+}
   
