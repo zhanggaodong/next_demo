@@ -7,12 +7,12 @@ const ChildItems = ({ items, params }) => {
       {items.map((sitem) => (
         <li
           key={sitem.id}
-          className={params === sitem.id ? 'active mb-4' : 'mb-4'}
+          className={params == sitem.id ? 'active mb-4' : 'mb-4'}
         >
           <Link
             className="block mb-1 text-sm transition-colors hover:text-blue-300"
             href={`/detail/${sitem.id}`}
-          >
+          > 
             {sitem.title}
           </Link>
         </li>

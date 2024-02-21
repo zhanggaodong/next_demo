@@ -38,3 +38,39 @@ export default async function RootLayout({ children }) {
   )
 }
  
+
+export const metadata = {
+  metadataBase: new URL('https://onur.dev'),
+  robots: {
+    index: true,
+    follow: true
+  },
+  title: {
+    template: `%s — ZGD的笔记本`,
+    default: 'ZGD的笔记本'
+  },
+  description: '默认描述',
+  openGraph: {
+    title: {
+      template: `%s — 标题2`,
+      default: '标题2'
+    },
+    description: '默认描述',
+    alt: '标题3',
+    type: 'website',
+    url: '/',
+    siteName:  '标题3',
+    locale: 'en_IE'
+  },
+  alternates: {
+    canonical: '/'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: 'twittername',
+    creator: 'twittername'
+  },
+  other: {
+    pinterest: 'nopin'
+  }
+}
