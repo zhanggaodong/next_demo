@@ -23,11 +23,10 @@ export async function generateMetadata({ params }) {
 
   return {
     title:data.data.title,
-    description:'description',
+    description:data.data.description,
     openGraph: {
       title:data.data.title,
-      description:'description', 
-      publishedTime:'publishedTime', 
+      description:data.data.description,  
       url: siteUrl
     },
     alternates: {

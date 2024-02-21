@@ -49,28 +49,20 @@ export const metadata = {
     template: `%s — ZGD的笔记本`,
     default: 'ZGD的笔记本'
   },
-  description: '默认描述',
+  description: '技术分享博客，记录笔记，问题总结',
   openGraph: {
     title: {
-      template: `%s — 标题2`,
-      default: '标题2'
+      template: `%s — ZGD的笔记本`,
+      default: 'ZGD的笔记本'
     },
-    description: '默认描述',
-    alt: '标题3',
+    description: '技术分享博客，记录笔记，问题总结',
+    alt: 'ZGD的笔记本',
     type: 'website',
     url: '/',
-    siteName:  '标题3',
+    siteName:  'ZGD的笔记本',
     locale: 'en_IE'
   },
   alternates: {
     canonical: '/'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: 'twittername',
-    creator: 'twittername'
-  },
-  other: {
-    pinterest: 'nopin'
   }
 }
